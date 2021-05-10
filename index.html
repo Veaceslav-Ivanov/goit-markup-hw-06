@@ -480,13 +480,84 @@
     </footer>
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
-        <button class="modal-btn-close" type="button" data-modal-close>
-          <svg class="close-modal__icon" width="18" height="18">
+        <button data-modal-close class="btn-modal-close">
+          <svg class="modal-svg">
             <use href="./images/symbol-defs.svg#modal-close"></use>
           </svg>
         </button>
-        <h3 class="modal-title">Оставьте свои данные, мы вам перезвоним</h3>
-        <p class="modal-item"></p>
+        <h2 class="modal-title">Оставьте свои данные, мы вам перезвоним</h2>
+        <form class="modal-form">
+          <div class="modal-form-name mf-margin">
+            <label for="mf-name" class="mf-label">Имя</label>
+            <div class="mf-element">
+              <svg class="mf-svg">
+                <use href="./images/symbol-defs.svg#person-black"></use>
+              </svg>
+              <input
+                type="text"
+                name="name"
+                id="mf-name"
+                class="mf-input-border mf-input-height mf-input-text mf-padding-svg mf-input-point"
+                autofocus
+              />
+            </div>
+          </div>
+          <div class="modal-form-tel mf-margin">
+            <label for="mf-tel" class="mf-label">Телефон</label>
+            <div class="mf-element">
+              <svg class="mf-svg">
+                <use href="./images/symbol-defs.svg#phone-black"></use>
+              </svg>
+              <input
+                type="tel"
+                name="tel"
+                id="mf-tel"
+                class="mf-input-border mf-input-height mf-input-text mf-padding-svg mf-input-point"
+              />
+            </div>
+          </div>
+          <div class="modal-form-email mf-margin">
+            <label for="mf-email" class="mf-label">Почта</label>
+            <div class="mf-element">
+              <svg class="mf-svg">
+                <use href="./images/symbol-defs.svg#email-black"></use>
+              </svg>
+              <input
+                type="email"
+                name="email"
+                id="mf-email"
+                class="mf-input-border mf-input-height mf-input-text mf-padding-svg mf-input-point"
+              />
+            </div>
+          </div>
+          <div class="modal-form-comment mf-element mf-margin-comment">
+            <label for="mf-comment" class="mf-label">Комментарий</label>
+            <textarea
+              name="comment"
+              id="mf-comment"
+              class="mf-textarea mf-input-point"
+              rows="10"
+              placeholder="Введите текст"
+            ></textarea>
+          </div>
+          <div class="mf-checkbox">
+            <input
+              type="checkbox"
+              id="mf-checkbox"
+              name="checkbox-policy"
+              class="visually-hidden check-box-condition"
+            />
+            <label for="mf-checkbox" class="mf-checkbox-label">
+              Соглашаюсь с рассылкой и принимаю&nbsp;<a
+                href=""
+                target=""
+                class="mf-policy"
+                >Условия договора</a
+              >
+            </label>
+          </div>
+          <button class="mf-button-send" type="submit">Отправить</button>
+        </form>
       </div>
     </div>
     <script src="./js/modal.js"></script>
